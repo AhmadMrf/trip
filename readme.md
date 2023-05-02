@@ -2,4 +2,4 @@
 
 made with `tailwindcss` and `vite-js`
 
-see demo here :
+see demo here : https://ahmadmrf.github.io/trip
