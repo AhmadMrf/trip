@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text-to-up {
+    @apply top-[45%] opacity-0 invisible;
+  }
+
+  .text-to-button {
+    @apply top-1/2 opacity-100 visible;
+  }
+  .text-to-left {
+    @apply left-[5%] opacity-100 visible translate-x-0 translate-y-1/2;
+  }
+  .text-to-right {
+    @apply left-[5%] ml-[calc(90%-30rem)] opacity-100 visible translate-x-0 translate-y-1/2;
+  }
+
+  .earth-to-up {
+    @apply top-[20%] right-0 translate-x-1/2 -rotate-90;
+  }
+  .earth-to-left {
+    @apply top-[20%] right-[85%] translate-x-1/4 -rotate-180;
+  }
+}
