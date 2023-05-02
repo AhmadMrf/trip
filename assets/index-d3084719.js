@@ -1,7 +1,7 @@
 (function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))l(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const r of t.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&l(r)}).observe(document,{childList:!0,subtree:!0});function c(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function l(e){if(e.ep)return;e.ep=!0;const t=c(e);fetch(e.href,t)}})();const n=()=>`
-    <section class=" relative z-10 h-full px-6">
+    <section class="max-w-[1920px] mx-auto relative z-10 h-full sm:px-6">
       
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 group-[.explore]:text-to-up transition-all duration-700 ease-out flex flex-col items-center gap-12 -mt-[min(20rem,calc(20_*_5vw))]">
+    <div class="absolute w-10/12 sm:top-1/2 top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 group-[.explore]:text-to-up transition-all duration-700 ease-out flex flex-col items-center gap-12 -mt-[min(20rem,calc(20_*_5vw))]">
           <div class="flex flex-col gap-4">
             <h1 class="text-5xl font-bold text-center">welcome to space-x</h1>
             <h3 class="text-lg opacity-50 text-center">
@@ -23,7 +23,7 @@
           </a>
         </div>
 
-        <div class="max-w-fit absolute sm:top-1/2 top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 opacity-0 invisible transition-all duration-700 ease-out sm:min-w-[30rem] sm:group-[.proceed.explore]:text-to-right group-[.explore]:text-to-button sm:group-[.explore]:text-to-left  flex flex-col items-center sm:basis-1/2 gap-12 -mt-[min(20rem,calc(20_*_5vw))]">
+        <div class="w-10/12 sm:max-w-fit absolute sm:top-1/2 top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 opacity-0 invisible transition-all duration-700 ease-out sm:min-w-[30rem] sm:group-[.proceed.explore]:text-to-right group-[.explore]:text-to-button sm:group-[.explore]:text-to-left  flex flex-col items-center sm:basis-1/2 gap-12 -mt-[min(20rem,calc(20_*_5vw))]">
           <div class="flex flex-col gap-4">
           <div class="grid">
           <h2 class="group-[.proceed]:opacity-0 opacity-100 duration-700 transition-opacity col-start-1 row-start-1 text-3xl font-bold text-center">plan your family trip into space.</h2>
@@ -53,10 +53,10 @@
           </div>
         </div>
       </section>
-      <div class="transition-all duration-1000 ease-out group-[.proceed]:earth-to-left group-[.explore]:earth-to-up absolute translate-x-1/2 rotate-0 right-1/2 top-full w-full">
+      <div class="transition-all duration-1000 ease-out max-w-[1920px] group-[.proceed]:earth-to-left group-[.explore]:earth-to-up absolute translate-x-1/2 rotate-0 right-1/2 top-[80%] w-full">
         <img class="mx-auto w-full scale-150" src="./earth.png" alt="earth" />
       </div>`,p=()=>`
-    <nav class="px-4 py-8 relative z-10 w-full">
+    <nav class=" max-w-[1920px] mx-auto px-4 py-8 relative z-10 w-full">
         <a href="#home" class="sm:hidden hover:opacity-70 w-8 h-8 ml-auto block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@
         </ul>
       </nav>
     `,u=()=>`
-  <main class="group max-w-[1920px] mx-auto relative h-screen">
+  <main class="group relative h-screen overflow-hidden">
       ${p()}
       ${n()}
     </main>
