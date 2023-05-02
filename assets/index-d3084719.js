@@ -1,5 +1,4 @@
-const home = () => {
-  return /*html*/ `
+(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))l(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const r of t.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&l(r)}).observe(document,{childList:!0,subtree:!0});function c(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function l(e){if(e.ep)return;e.ep=!0;const t=c(e);fetch(e.href,t)}})();const n=()=>`
     <section class=" relative z-10 h-full px-6">
       
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 group-[.explore]:text-to-up transition-all duration-700 ease-out flex flex-col items-center gap-12 -mt-[min(20rem,calc(20_*_5vw))]">
@@ -56,6 +55,54 @@ const home = () => {
       </section>
       <div class="transition-all duration-1000 ease-out group-[.proceed]:earth-to-left group-[.explore]:earth-to-up absolute translate-x-1/2 rotate-0 right-1/2 top-full w-full">
         <img class="mx-auto w-full scale-150" src="./earth.png" alt="earth" />
-      </div>`;
-};
-export default home;
+      </div>`,p=()=>`
+    <nav class="px-4 py-8 relative z-10 w-full">
+        <a href="#home" class="sm:hidden hover:opacity-70 w-8 h-8 ml-auto block">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+            class="fill-white cursor-pointer"
+          >
+            <path
+              d="M17,11H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,11,17,11z"
+            ></path>
+            <path
+              d="M21,7H3C2.4,7,2,6.6,2,6s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,7,21,7z"
+            ></path>
+            <path
+              d="M21,15H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,15,21,15z"
+            ></path>
+            <path
+              d="M17,19H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,19,17,19z"
+            ></path>
+          </svg>
+        </a>
+        <ul class="max-sm:hidden w-2/3 ml-auto flex justify-around capitalize">
+          <li>
+            <a class="px-4 hover:opacity-75 py-2" href="#home">home</a>
+          </li>
+          <li>
+            <a class="px-4 hover:opacity-75 py-2" href="#explore"
+              >explore</a
+            >
+          </li>
+          <li>
+            <a class="px-4 hover:opacity-75 py-2" href="#about"
+              >about</a
+            >
+          </li>
+          <li>
+            <a class="px-4 hover:opacity-75 py-2" href="#contact"
+              >contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    `,u=()=>`
+  <main class="group max-w-[1920px] mx-auto relative h-screen">
+      ${p()}
+      ${n()}
+    </main>
+    `,i=document.body;i.innerHTML=u();location.hash="";const a=i.querySelector("main"),d=a.querySelector("#proceed"),h=s=>{const o=new URL(s.newURL).hash;a.classList.toggle("home",o==="#home"),a.classList.toggle("explore",o==="#explore"),a.classList.remove("proceed")};d.addEventListener("click",()=>{a.classList.toggle("proceed")});window.addEventListener("hashchange",h);
