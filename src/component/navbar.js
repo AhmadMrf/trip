@@ -1,6 +1,6 @@
 const navbar = () => {
   return /*html*/ `
-    <nav class="px-4 py-8 relative z-10 w-full">
+    <nav class=" max-w-[1920px] mx-auto px-4 py-8 relative z-10 w-full">
         <a href="#home" class="sm:hidden hover:opacity-70 w-8 h-8 ml-auto block">
           <svg
             xmlns="http://www.w3.org/2000/svg"

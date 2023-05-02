@@ -3,7 +3,7 @@ import navbar from "./navbar";
 
 const main_layout = () => {
   return /*html*/ `
-  <main class="group max-w-[1920px] mx-auto relative h-screen">
+  <main class="group relative h-screen overflow-hidden">
       ${navbar()}
       ${home()}
     </main>

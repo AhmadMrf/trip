@@ -1,8 +1,8 @@
 const home = () => {
   return /*html*/ `
-    <section class=" relative z-10 h-full px-6">
+    <section class="max-w-[1920px] mx-auto relative z-10 h-full sm:px-6">
       
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 group-[.explore]:text-to-up transition-all duration-700 ease-out flex flex-col items-center gap-12 -mt-[min(20rem,calc(20_*_5vw))]">
+    <div class="absolute w-10/12 sm:top-1/2 top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 group-[.explore]:text-to-up transition-all duration-700 ease-out flex flex-col items-center gap-12 -mt-[min(20rem,calc(20_*_5vw))]">
           <div class="flex flex-col gap-4">
             <h1 class="text-5xl font-bold text-center">welcome to space-x</h1>
             <h3 class="text-lg opacity-50 text-center">
@@ -24,7 +24,7 @@ const home = () => {
           </a>
         </div>
 
-        <div class="max-w-fit absolute sm:top-1/2 top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 opacity-0 invisible transition-all duration-700 ease-out sm:min-w-[30rem] sm:group-[.proceed.explore]:text-to-right group-[.explore]:text-to-button sm:group-[.explore]:text-to-left  flex flex-col items-center sm:basis-1/2 gap-12 -mt-[min(20rem,calc(20_*_5vw))]">
+        <div class="w-10/12 sm:max-w-fit absolute sm:top-1/2 top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 opacity-0 invisible transition-all duration-700 ease-out sm:min-w-[30rem] sm:group-[.proceed.explore]:text-to-right group-[.explore]:text-to-button sm:group-[.explore]:text-to-left  flex flex-col items-center sm:basis-1/2 gap-12 -mt-[min(20rem,calc(20_*_5vw))]">
           <div class="flex flex-col gap-4">
           <div class="grid">
           <h2 class="group-[.proceed]:opacity-0 opacity-100 duration-700 transition-opacity col-start-1 row-start-1 text-3xl font-bold text-center">plan your family trip into space.</h2>
@@ -54,7 +54,7 @@ const home = () => {
           </div>
         </div>
       </section>
-      <div class="transition-all duration-1000 ease-out group-[.proceed]:earth-to-left group-[.explore]:earth-to-up absolute translate-x-1/2 rotate-0 right-1/2 top-full w-full">
+      <div class="transition-all duration-1000 ease-out max-w-[1920px] group-[.proceed]:earth-to-left group-[.explore]:earth-to-up absolute translate-x-1/2 rotate-0 right-1/2 top-[80%] w-full">
         <img class="mx-auto w-full scale-150" src="./earth.png" alt="earth" />
       </div>`;
 };
