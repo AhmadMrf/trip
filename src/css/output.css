@@ -546,6 +546,14 @@ video {
   top: 80%;
 }
 
+.top-\[45\%\]{
+  top: 45%;
+}
+
+.top-\[35\%\]{
+  top: 35%;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -569,6 +577,26 @@ video {
 
 .ml-auto{
   margin-left: auto;
+}
+
+.-mt-\[min\(20rem\2c calc\(20_\*_5vh\)\)\]{
+  margin-top: calc(min(20rem,calc(20 * 5vh)) * -1);
+}
+
+.-mt-\[min\(20rem\2c calc\(10_\*_5vw\)\)\]{
+  margin-top: calc(min(20rem,calc(10 * 5vw)) * -1);
+}
+
+.-mt-\[min\(10rem\2c calc\(10_\*_5vw\)\)\]{
+  margin-top: calc(min(10rem,calc(10 * 5vw)) * -1);
+}
+
+.-mt-\[min\(15rem\2c calc\(10_\*_5vh\)\)\]{
+  margin-top: calc(min(15rem,calc(10 * 5vh)) * -1);
+}
+
+.-mt-\[min\(15rem\2c calc\(10_\*_5vw\)\)\]{
+  margin-top: calc(min(15rem,calc(10 * 5vw)) * -1);
 }
 
 .block{
@@ -669,6 +697,10 @@ video {
   flex-direction: column;
 }
 
+.items-start{
+  align-items: flex-start;
+}
+
 .items-center{
   align-items: center;
 }
@@ -748,6 +780,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -769,6 +806,11 @@ video {
 
 .text-lg{
   font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -829,7 +871,7 @@ video {
 
 .group.explore .group-\[\.explore\]\:text-to-button{
   visibility: visible;
-  top: 33.333333%;
+  top: 45%;
   opacity: 1;
 }
 
@@ -932,12 +974,44 @@ video {
     flex-basis: 50%;
   }
 
+  .sm\:items-start{
+    align-items: flex-start;
+  }
+
+  .sm\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .sm\:justify-center{
+    justify-content: center;
+  }
+
   .sm\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
+  .sm\:py-2{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .sm\:text-left{
+    text-align: left;
+  }
+
+  .sm\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .group.proceed .sm\:group-\[\.proceed\]\:flex-row{
     flex-direction: row;
+  }
+}
+
+@media (orientation: landscape){
+  .landscape\:-mt-\[min\(15rem\2c calc\(10_\*_5vw\)\)\]{
+    margin-top: calc(min(15rem,calc(10 * 5vw)) * -1);
   }
 }
